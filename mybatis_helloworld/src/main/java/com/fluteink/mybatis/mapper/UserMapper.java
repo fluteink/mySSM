@@ -5,4 +5,5 @@ package com.fluteink.mybatis.mapper;
  * @version 1.0
  */
 public interface UserMapper {
+    int insertUser();
 }
