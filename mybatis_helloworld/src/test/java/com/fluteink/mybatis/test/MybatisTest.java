@@ -38,4 +38,12 @@ public class MybatisTest {
         mapper.updateUser();
         sqlSession.close();
     }
+
+    @Test
+    public void testDelete() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        mapper.deleteUser();
+        sqlSession.close();
+    }
 }

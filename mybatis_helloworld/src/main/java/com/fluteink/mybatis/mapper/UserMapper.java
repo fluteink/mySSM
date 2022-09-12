@@ -18,4 +18,9 @@ public interface UserMapper {
      * @return
      */
     int updateUser();
+
+    /**
+     * 删除用户信息
+     */
+    int deleteUser();
 }
