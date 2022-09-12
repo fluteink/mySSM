@@ -20,12 +20,13 @@ public class MybatisTest {
         InputStream resourceAsStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(resourceAsStream);
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+//        SqlSession sqlSession = sqlSessionFactory.openSession();//不会自动提交事物
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-//        int i = mapper.insertUser();
-        int i = sqlSession.insert("com.fluteink.mybatis.mapper.UserMapper.insertUser");
+        int i = mapper.insertUser();
+//        int i = sqlSession.insert("com.fluteink.mybatis.mapper.UserMapper.insertUser");
         System.out.println("结果:  " + i);
-        sqlSession.commit();//提交事物
+//        sqlSession.commit();//提交事物
         sqlSession.close();
 
     }
