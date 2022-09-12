@@ -29,4 +29,5 @@ public class MybatisTest {
 //        sqlSession.commit();//提交事物
         sqlSession.close();
     }
+
 }
