@@ -25,7 +25,7 @@ public class MybatisTest {
 //        int i = mapper.insertUser();
         int i = sqlSession.insert("com.fluteink.mybatis.mapper.UserMapper.insertUser");
         System.out.println("结果:  " + i);
-        sqlSession.commit();
+        sqlSession.commit();//提交事物
         sqlSession.close();
 
     }
