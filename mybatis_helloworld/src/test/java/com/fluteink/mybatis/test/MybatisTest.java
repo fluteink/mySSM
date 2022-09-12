@@ -1,6 +1,7 @@
 package com.fluteink.mybatis.test;
 
 import com.fluteink.mybatis.mapper.UserMapper;
+import com.fluteink.mybatis.utils.SqlSessionUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -30,4 +31,11 @@ public class MybatisTest {
         sqlSession.close();
     }
 
+    @Test
+    public void testUpdate() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        mapper.updateUser();
+        sqlSession.close();
+    }
 }

@@ -5,5 +5,17 @@ package com.fluteink.mybatis.mapper;
  * @version 1.0
  */
 public interface UserMapper {
+    /**
+     * 添加用户信息
+     *
+     * @return
+     */
     int insertUser();
+
+    /**
+     * 修改用户信息
+     *
+     * @return
+     */
+    int updateUser();
 }
