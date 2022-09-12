@@ -28,6 +28,5 @@ public class MybatisTest {
         System.out.println("结果:  " + i);
 //        sqlSession.commit();//提交事物
         sqlSession.close();
-
     }
 }
