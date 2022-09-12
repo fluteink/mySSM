@@ -20,7 +20,7 @@ public class MybatisTest {
         InputStream resourceAsStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(resourceAsStream);
-//        SqlSession sqlSession = sqlSessionFactory.openSession();//不会自动提交事物
+//        SqlSession sqlSession = sqlSessionFactory.openSession();//不会自动提交事物33
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         int i = mapper.insertUser();
