@@ -21,4 +21,11 @@
         from t_user
         where id = 2
     </delete>
+    <!--    User getUserById();-->
+
+    <select id="getUserById" resultType="com.fluteink.mybatis.pojo.User">
+        select *
+        from t_user
+        where id = 1
+    </select>
 </mapper>
