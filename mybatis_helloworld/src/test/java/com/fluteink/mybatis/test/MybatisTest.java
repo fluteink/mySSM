@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @author 明宇
@@ -54,6 +55,15 @@ public class MybatisTest {
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         User user = mapper.getUserById();
         System.out.println(user);
+        sqlSession.close();
+    }
+
+    @Test
+    public void testGetAllUsers() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        List<User> allUsers = mapper.getAllUsers();
+        for (User user : allUsers) System.out.println(user);
         sqlSession.close();
     }
 }
