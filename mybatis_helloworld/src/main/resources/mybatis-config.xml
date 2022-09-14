@@ -6,6 +6,7 @@
     <properties resource="jdbc.properties"/>
     <typeAliases>
 <!--        <typeAlias type="com.fluteink.mybatis.pojo.User"></typeAlias>-->
+        <package name="com.fluteink.mybatis.pojo"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
