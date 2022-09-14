@@ -23,13 +23,13 @@
     </delete>
     <!--    User getUserById();-->
 
-    <select id="getUserById" resultType="com.fluteink.mybatis.pojo.User">
+    <select id="getUserById" resultType="User">
         select *
         from t_user
         where id = 1
     </select>
     <!--    List<User> getAllUsers();-->
-    <select id="getAllUsers" resultType="com.fluteink.mybatis.pojo.User">
+    <select id="getAllUsers" resultType="User">
         select *
         from t_user
     </select>
