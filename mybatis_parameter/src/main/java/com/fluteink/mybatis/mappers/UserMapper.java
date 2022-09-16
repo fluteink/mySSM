@@ -14,4 +14,13 @@ public interface UserMapper {
      * @return
      */
     User getUserByUsername(String username);
+
+    /**
+     * 验证登录
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    User checkLogin(String username, String password);
 }

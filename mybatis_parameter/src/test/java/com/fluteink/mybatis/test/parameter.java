@@ -18,4 +18,12 @@ public class parameter {
         User admin = mapper.getUserByUsername("admin");
         System.out.println(admin);
     }
+
+    @Test
+    public void checkLogin() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User admin = mapper.checkLogin("admin", "123456");
+        System.out.println(admin);
+    }
 }
