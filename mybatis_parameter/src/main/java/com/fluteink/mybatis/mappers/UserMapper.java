@@ -1,6 +1,7 @@
 package com.fluteink.mybatis.mappers;
 
 import com.fluteink.mybatis.pojo.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Map;
 
@@ -40,4 +41,13 @@ public interface UserMapper {
      * @param user
      */
     void insertUser(User user);
+
+    /**
+     * 检查登录（使用@param）
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    User checkLoginByParams(@Param("username") String username, @Param("password") String password);
 }
