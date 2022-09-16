@@ -33,4 +33,11 @@ public interface UserMapper {
      * @return
      */
     User checkLoginByMap(Map<String, Object> map);
+
+    /**
+     * 添加用户信息
+     *
+     * @param user
+     */
+    void insertUser(User user);
 }

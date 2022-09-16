@@ -40,4 +40,13 @@ public class parameter {
         User admin = mapper.checkLoginByMap(map);
         System.out.println(admin);
     }
+
+    @Test
+    public void testInsertUser() {
+
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User user = new User(null, "root", "123", 33, "女", "123@qq.vpm");
+        mapper.insertUser(user);
+    }
 }
