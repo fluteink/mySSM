@@ -26,6 +26,13 @@ public class SelectMapper {
         com.fluteink.mybatis.mappers.SelectMapper mapper = sqlSession.getMapper(com.fluteink.mybatis.mappers.SelectMapper.class);
         List<User> allUsers = mapper.getAllUsers();
         allUsers.forEach(System.out::println);
+    }
 
+    @Test
+    public void getcount() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        com.fluteink.mybatis.mappers.SelectMapper mapper = sqlSession.getMapper(com.fluteink.mybatis.mappers.SelectMapper.class);
+        Integer count = mapper.getCount();
+        System.out.println(count);
     }
 }

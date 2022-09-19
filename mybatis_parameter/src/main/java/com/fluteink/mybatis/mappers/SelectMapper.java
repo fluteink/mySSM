@@ -19,4 +19,6 @@ public interface SelectMapper {
     User getUserById(@Param("id") Integer id);
 
     List<User> getAllUsers();
+
+    Integer getCount();
 }
