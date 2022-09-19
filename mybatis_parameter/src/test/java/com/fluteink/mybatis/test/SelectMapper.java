@@ -44,4 +44,13 @@ public class SelectMapper {
         Map<String, Object> userByIdToMap = mapper.getUserByIdToMap(4);
         System.out.println(userByIdToMap);
     }
+
+    @Test
+    public void getAllUsersToMap() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        com.fluteink.mybatis.mappers.SelectMapper mapper = sqlSession.getMapper(com.fluteink.mybatis.mappers.SelectMapper.class);
+        List<Map<String, Object>> allUsersToMap = mapper.getAllUsersToMap();
+        allUsersToMap.forEach(System.out::println);
+
+    }
 }
