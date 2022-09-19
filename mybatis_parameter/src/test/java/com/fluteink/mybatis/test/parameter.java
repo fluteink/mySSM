@@ -57,4 +57,5 @@ public class parameter {
         User admin = mapper.checkLoginByParams("admin", "123456");
         System.out.println(admin);
     }
+
 }

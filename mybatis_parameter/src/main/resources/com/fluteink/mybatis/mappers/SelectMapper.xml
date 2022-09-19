@@ -19,4 +19,10 @@
         select count(*)
         from t_user
     </select>
+    <!--    Map<String,Object> getUserByIdToMap();-->
+    <select id="getUserByIdToMap" resultType="map">
+        select *
+        from t_user
+        where id = #{id}
+    </select>
 </mapper>

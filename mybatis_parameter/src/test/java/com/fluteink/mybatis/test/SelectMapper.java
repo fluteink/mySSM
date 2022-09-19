@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 明宇
@@ -34,5 +35,13 @@ public class SelectMapper {
         com.fluteink.mybatis.mappers.SelectMapper mapper = sqlSession.getMapper(com.fluteink.mybatis.mappers.SelectMapper.class);
         Integer count = mapper.getCount();
         System.out.println(count);
+    }
+
+    @Test
+    public void getUserByIdToMap() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        com.fluteink.mybatis.mappers.SelectMapper mapper = sqlSession.getMapper(com.fluteink.mybatis.mappers.SelectMapper.class);
+        Map<String, Object> userByIdToMap = mapper.getUserByIdToMap(4);
+        System.out.println(userByIdToMap);
     }
 }

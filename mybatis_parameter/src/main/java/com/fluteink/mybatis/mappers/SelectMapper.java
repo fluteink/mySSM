@@ -4,6 +4,7 @@ import com.fluteink.mybatis.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 明宇
@@ -21,4 +22,8 @@ public interface SelectMapper {
     List<User> getAllUsers();
 
     Integer getCount();
+
+    Map<String, Object> getUserByIdToMap(@Param("id") Integer id);
+
+    List<Map<String, Object>> getAllUsersToMap();
 }
