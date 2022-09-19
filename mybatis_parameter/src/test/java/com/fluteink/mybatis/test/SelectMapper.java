@@ -51,6 +51,5 @@ public class SelectMapper {
         com.fluteink.mybatis.mappers.SelectMapper mapper = sqlSession.getMapper(com.fluteink.mybatis.mappers.SelectMapper.class);
         List<Map<String, Object>> allUsersToMap = mapper.getAllUsersToMap();
         allUsersToMap.forEach(System.out::println);
-
     }
 }
