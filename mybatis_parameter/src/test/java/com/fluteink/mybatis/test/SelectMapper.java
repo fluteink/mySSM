@@ -52,4 +52,11 @@ public class SelectMapper {
         List<Map<String, Object>> allUsersToMap = mapper.getAllUsersToMap();
         allUsersToMap.forEach(System.out::println);
     }
+    @Test
+    public void getAllUsersToMap1() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        com.fluteink.mybatis.mappers.SelectMapper mapper = sqlSession.getMapper(com.fluteink.mybatis.mappers.SelectMapper.class);
+        Map<String, Object> allUsersToMap1 = mapper.getAllUsersToMap1();
+        System.out.println(allUsersToMap1);
+    }
 }

@@ -1,6 +1,7 @@
 package com.fluteink.mybatis.mappers;
 
 import com.fluteink.mybatis.pojo.User;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -26,4 +27,6 @@ public interface SelectMapper {
     Map<String, Object> getUserByIdToMap(@Param("id") Integer id);
 
     List<Map<String, Object>> getAllUsersToMap();
+    @MapKey("id")
+    Map<String,Object> getAllUsersToMap1();
 }

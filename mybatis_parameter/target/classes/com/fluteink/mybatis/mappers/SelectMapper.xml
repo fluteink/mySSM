@@ -25,8 +25,13 @@
         from t_user
         where id = #{id}
     </select>
-<!--    List<Map<String,Object>> getAllUsersToMap();-->
-<select id="getAllUsersToMap" resultType="map">
+    <!--    List<Map<String,Object>> getAllUsersToMap();-->
+    <select id="getAllUsersToMap" resultType="map">
+        select *
+        from t_user
+    </select>
+<!--    Map<String,Object> getAllUsersToMap1();-->
+<select id="getAllUsersToMap1" resultType="map">
     select * from t_user
 </select>
 </mapper>

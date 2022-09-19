@@ -30,4 +30,8 @@
         select *
         from t_user
     </select>
+<!--    Map<String,Object> getAllUsersToMap1();-->
+<select id="getAllUsersToMap1" resultType="map">
+    select * from t_user
+</select>
 </mapper>
