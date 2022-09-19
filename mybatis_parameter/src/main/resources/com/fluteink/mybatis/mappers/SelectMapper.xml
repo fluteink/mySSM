@@ -15,7 +15,7 @@
         from t_user
     </select>
     <!--    Integer getCount();-->
-    <select id="getCount" resultType="Integer">
+    <select id="getCount" resultType="int">
         select count(*)
         from t_user
     </select>
