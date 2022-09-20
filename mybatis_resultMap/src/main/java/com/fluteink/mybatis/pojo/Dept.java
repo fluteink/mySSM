@@ -4,24 +4,25 @@ package com.fluteink.mybatis.pojo;
  * @author 明宇
  * @version 1.0
  */
-public class dept {
-     private Integer deptId;
-     private String deptName;
+public class Dept
+{
+    private Integer deptId;
+    private String deptName;
 
     @Override
     public String toString() {
-        return "dept{" +
+        return "Dept{" +
                 "deptId=" + deptId +
                 ", deptName='" + deptName + '\'' +
                 '}';
     }
 
-    public dept(Integer deptId, String deptName) {
+    public Dept(Integer deptId, String deptName) {
         this.deptId = deptId;
         this.deptName = deptName;
     }
 
-    public dept() {
+    public Dept() {
     }
 
     public Integer getDeptId() {
