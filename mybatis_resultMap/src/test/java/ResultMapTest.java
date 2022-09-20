@@ -15,6 +15,5 @@ public class ResultMapTest {
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         Emp empByEmpId = mapper.getEmpByEmpId(1);
         System.out.println(empByEmpId);
-
     }
 }
