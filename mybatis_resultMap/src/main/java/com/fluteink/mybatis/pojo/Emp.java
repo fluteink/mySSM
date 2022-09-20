@@ -9,6 +9,7 @@ public class Emp {
     private String empName;
     private Integer age;
     private String gender;
+private Dept dept;
 
     @Override
     public String toString() {
@@ -17,7 +18,24 @@ public class Emp {
                 ", empName='" + empName + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
+                ", dept=" + dept +
                 '}';
+    }
+
+    public Dept getDept() {
+        return dept;
+    }
+
+    public void setDept(Dept dept) {
+        this.dept = dept;
+    }
+
+    public Emp(Integer empId, String empName, Integer age, String gender, Dept dept) {
+        this.empId = empId;
+        this.empName = empName;
+        this.age = age;
+        this.gender = gender;
+        this.dept = dept;
     }
 
     public Emp() {
