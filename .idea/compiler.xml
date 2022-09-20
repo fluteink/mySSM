@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis_parameter" />
+        <module name="mybatis_resultMap" />
         <module name="mybatis_helloworld" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="mybatis_helloworld" target="11" />
       <module name="mybatis_parameter" target="11" />
+      <module name="mybatis_resultMap" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -20,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mybatis_helloworld" options="" />
       <module name="mybatis_parameter" options="" />
+      <module name="mybatis_resultMap" options="" />
     </option>
   </component>
 </project>
