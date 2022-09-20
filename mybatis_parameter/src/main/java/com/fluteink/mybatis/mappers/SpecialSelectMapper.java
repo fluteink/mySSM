@@ -12,4 +12,5 @@ import java.util.List;
 public interface SpecialSelectMapper {
     List<User> SpecialSelect(@Param("mohu") String mohu);
     void deleteUsers(@Param("ids") String ids);
+    List<User> searchUsers(@Param("table") String table);
 }

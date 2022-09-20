@@ -26,4 +26,11 @@ public class SpecialSelectTest {
         SpecialSelectMapper mapper = sqlSession.getMapper(SpecialSelectMapper.class);
         mapper.deleteUsers("11,12");
     }
+    @Test
+    public void searchusertables() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        SpecialSelectMapper mapper = sqlSession.getMapper(SpecialSelectMapper.class);
+        List<User> t_user = mapper.searchUsers("t_user");
+        t_user.forEach(System.out::println);
+    }
 }

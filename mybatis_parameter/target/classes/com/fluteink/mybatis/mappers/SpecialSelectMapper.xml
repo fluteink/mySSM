@@ -11,6 +11,10 @@
 <delete id="deleteUsers">
     delete
     from t_user
-    where id in (${ids});
+    where id in (${ids})
 </delete>
+<!--    List<User> searchUsers(@Param("table") String table);-->
+<select id="searchUsers" resultType="User">
+    select * from ${table}
+</select>
 </mapper>
