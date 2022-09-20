@@ -20,4 +20,10 @@ public class SpecialSelectTest {
         List<User> a = mapper.SpecialSelect("a");
         a.forEach(System.out::println);
     }
+    @Test
+    public void deleteUsers() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        SpecialSelectMapper mapper = sqlSession.getMapper(SpecialSelectMapper.class);
+        mapper.deleteUsers("11,12");
+    }
 }

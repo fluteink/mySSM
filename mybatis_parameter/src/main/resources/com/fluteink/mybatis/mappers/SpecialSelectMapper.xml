@@ -7,4 +7,10 @@
 <select id="SpecialSelect" resultType="User">
     select * from t_user where username like "%"#{mohu}"%"
 </select>
+<!--    void deleteUsers(@Param("ids") String ids);-->
+<delete id="deleteUsers">
+    delete
+    from t_user
+    where id in (${ids});
+</delete>
 </mapper>
