@@ -19,6 +19,5 @@ public class SpecialSelectTest {
         SpecialSelectMapper mapper = sqlSession.getMapper(SpecialSelectMapper.class);
         List<User> a = mapper.SpecialSelect("a");
         a.forEach(System.out::println);
-
     }
 }
