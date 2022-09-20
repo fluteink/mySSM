@@ -9,7 +9,7 @@ public class Emp {
     private String empName;
     private Integer age;
     private String gender;
-private Dept dept;
+    private Dept dept;
 
     @Override
     public String toString() {
