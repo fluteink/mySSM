@@ -33,4 +33,12 @@ public class SpecialSelectTest {
         List<User> t_user = mapper.searchUsers("t_user");
         t_user.forEach(System.out::println);
     }
+    @Test
+    public void insertUser() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        SpecialSelectMapper mapper = sqlSession.getMapper(SpecialSelectMapper.class);
+        User ming = new User(null, "xiaoming", "123456", 20, "男", "884733966@qq.com");
+        mapper.insertUser(ming);
+        System.out.println(ming);
+    }
 }
