@@ -12,7 +12,7 @@ import java.io.InputStream;
  * @author 明宇
  * @version 1.0
  */
-public class SqlSessionUtil {
+public class  SqlSessionUtil {
 
     public static SqlSession getSqlSession() {
         SqlSession sqlSession = null;
