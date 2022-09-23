@@ -27,12 +27,27 @@
             <result column="dept_name" property="deptName"/>
         </association>
     </resultMap>
+
     <!--    Emp getEmpAndDeptByEmpId (@Param("empId") Integer empId);-->
     <select id="getEmpAndDeptByEmpId" resultMap="empAndDeptResultMap">
         select t_emp.*, t_dept.*
         from t_emp
                  left join t_dept on t_dept.dept_id = t_emp.dept_id
         where t_emp.emp_id = #{empId}
+    </select>
+    <!--    Emp getEmpAndDeptByStep (@Param("empId") Integer empId);-->
+    <resultMap id="empAndDeptResultMapStep" type="Emp">
+        <id column="emp_id" property="empId"/>
+        <result column="emp_name" property="empName"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <association property="dept" select="" column="">
+        </association>
+    </resultMap>
+    <select id="getEmpAndDeptByStep" resultMap="empAndDeptResultMapStep">
+        select *
+        from t_emp
+        where emp_id = #{empId}
     </select>
 
 </mapper>
