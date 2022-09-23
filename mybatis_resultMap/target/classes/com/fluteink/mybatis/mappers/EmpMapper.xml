@@ -41,7 +41,7 @@
         <result column="emp_name" property="empName"/>
         <result column="age" property="age"/>
         <result column="gender" property="gender"/>
-        <association property="dept" select="" column="">
+        <association property="dept" select="com.fluteink.mybatis.mappers.DeptMapper.getEmpAndDeptByStep2" column="dept_id">
         </association>
     </resultMap>
     <select id="getEmpAndDeptByStep" resultMap="empAndDeptResultMapStep">

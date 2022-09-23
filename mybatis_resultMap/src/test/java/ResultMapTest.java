@@ -33,4 +33,11 @@ public class ResultMapTest {
         Dept empAndDeptByStep2 = mapper.getEmpAndDeptByStep2(1);
         System.out.println(empAndDeptByStep2);
     }
+    @Test
+    public void testGetEmpAndDeptByStep() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        Emp empAndDeptByStep = mapper.getEmpAndDeptByStep(2);
+        System.out.println(empAndDeptByStep);
+    }
 }
