@@ -7,4 +7,6 @@
 <select id="getEmpAndDeptByStep2" resultType="Dept">
     select  * from t_dept where dept_id = #{deptId}
 </select>
+<!--    Dept getDeptAndEmpByDeptId(@Param("DeptId") Integer deptId);-->
+
 </mapper>
