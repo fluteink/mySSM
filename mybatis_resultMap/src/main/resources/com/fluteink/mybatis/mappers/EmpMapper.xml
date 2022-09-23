@@ -41,9 +41,7 @@
         <result column="emp_name" property="empName"/>
         <result column="age" property="age"/>
         <result column="gender" property="gender"/>
-        <association property="dept" javaType="Dept">
-            <id column="dept_id" property="deptId"/>
-            <result column="dept_name" property="deptName"/>
+        <association property="dept" select="" column="">
         </association>
     </resultMap>
     <select id="getEmpAndDeptByStep" resultMap="empAndDeptResultMapStep">
