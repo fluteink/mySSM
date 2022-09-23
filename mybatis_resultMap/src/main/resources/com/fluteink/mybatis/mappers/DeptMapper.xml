@@ -3,10 +3,17 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fluteink.mybatis.mappers.DeptMapper">
-<!--    Dept getEmpAndDeptByStep2(@Param("deptId") Integer deptId);-->
-<select id="getEmpAndDeptByStep2" resultType="Dept">
-    select  * from t_dept where dept_id = #{deptId}
-</select>
-<!--    Dept getDeptAndEmpByDeptId(@Param("DeptId") Integer deptId);-->
-
+    <!--    Dept getEmpAndDeptByStep2(@Param("deptId") Integer deptId);-->
+    <select id="getEmpAndDeptByStep2" resultType="Dept">
+        select *
+        from t_dept
+        where dept_id = #{deptId}
+    </select>
+    <!--    Dept getDeptAndEmpByDeptId(@Param("deptId") Integer deptId);-->
+    <select id="getDeptAndEmpByDeptId" resultMap="">
+        select *
+        from t_dept
+                 left join t_emp on t_dept.dept_id = t_emp.dept_id
+        where t_dept.dept_id = #{deptId}
+    </select>
 </mapper>

@@ -9,5 +9,5 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface DeptMapper {
     Dept getEmpAndDeptByStep2(@Param("deptId") Integer deptId);
-    Dept getDeptAndEmpByDeptId(@Param("DeptId") Integer deptId);
+    Dept getDeptAndEmpByDeptId(@Param("deptId") Integer deptId);
 }
