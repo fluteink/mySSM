@@ -10,4 +10,5 @@ import org.apache.ibatis.annotations.Param;
 public interface EmpMapper {
     Emp getEmpByEmpId (@Param("empId") Integer empId);
     Emp getEmpAndDeptByEmpId (@Param("empId") Integer empId);
+    Emp getEmpAndDeptByStep (@Param("empId") Integer empId);
 }
