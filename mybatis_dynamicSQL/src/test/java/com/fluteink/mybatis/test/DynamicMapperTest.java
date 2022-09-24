@@ -19,6 +19,6 @@ public class DynamicMapperTest {
         DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
         Emp emp = new Emp(null, "张三", 20, "男");
         List<Emp> empsByCondition = mapper.getEmpsByCondition(emp);
-        System.out.println(empsByCondition);
+        empsByCondition.forEach(System.out::println);
     }
 }
