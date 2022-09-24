@@ -15,6 +15,18 @@
         <if test="gender != null and gender != ''">
             and gender=#{gender}
         </if>
+    </select>
 
+    <select id="getEmpsByConditionOne" resultType="Emp">
+        select * from t_emp where 1=1
+        <if test="empName != null and empName != '' ">
+           and emp_name=#{empName}
+        </if>
+        <if test="age != null and age != ''">
+            and age = #{age}
+        </if>
+        <if test="gender != null and gender != ''">
+            and gender=#{gender}
+        </if>
     </select>
 </mapper>
