@@ -49,5 +49,8 @@
         from t_emp
         where emp_id = #{empId}
     </select>
-
+<!--    List<Emp> getEmpsByDeptId (@Param("deptId") Integer deptId);-->
+<select id="getEmpsByDeptId" resultType="Emp">
+    select * from t_emp where dept_id=#{deptId}
+</select>
 </mapper>

@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.List;
+
 /**
  * @author 明宇
  * @version 1.0
@@ -46,5 +48,19 @@ public class ResultMapTest {
         DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
         Dept deptAndEmpByDeptId = mapper.getDeptAndEmpByDeptId(1);
         System.out.println(deptAndEmpByDeptId);
+    }
+    @Test
+    public void testgetEmpsByDeptId() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        List<Emp> empsByDeptId = mapper.getEmpsByDeptId(1);
+        System.out.println(empsByDeptId);
+    }
+    @Test
+    public void testGetDeptAndEmpByStep() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
+        Dept deptAndEmpByStepOne = mapper.getDeptAndEmpByStepOne(1);
+        System.out.println(deptAndEmpByStepOne);
     }
 }

@@ -21,7 +21,7 @@ private List<Emp> emps;
         return "Dept{" +
                 "deptId=" + deptId +
                 ", deptName='" + deptName + '\'' +
-                ", emps=" + emps +
+                ", emps=" + emps.toString() +
                 '}';
     }
 
