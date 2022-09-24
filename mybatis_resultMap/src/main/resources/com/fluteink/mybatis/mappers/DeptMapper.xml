@@ -26,4 +26,8 @@
                  left join t_emp on t_dept.dept_id = t_emp.dept_id
         where t_dept.dept_id = #{deptId}
     </select>
+<!--    Dept getDeptAndEmpByStepOne(@Param("deptId") Integer deptId);-->
+<select id="getDeptAndEmpByStepOne" resultMap="">
+    select * from t_dept where dept_id = #{deptId}
+</select>
 </mapper>
