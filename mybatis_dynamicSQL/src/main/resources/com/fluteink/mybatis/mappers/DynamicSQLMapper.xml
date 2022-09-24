@@ -5,16 +5,18 @@
 <mapper namespace="com.fluteink.mybatis.mappers.DynamicSQLMapper">
     <!--    List<Emp> getEmpsByCondition(Emp emp);-->
     <select id="getEmpsByCondition" resultType="Emp">
-        select * from t_emp where
-        <if test="empName != null and empName != '' ">
-         emp_name=#{empName}
-        </if>
-        <if test="age != null and age != ''">
-            and age = #{age}
-        </if>
-        <if test="gender != null and gender != ''">
-            and gender=#{gender}
-        </if>
+        select * from t_emp
+      <where>
+          <if test="empName != null and empName != '' ">
+            emp_name=#{empName}
+          </if>
+          <if test="age != null and age != ''">
+              and age = #{age}
+          </if>
+          <if test="gender != null and gender != ''">
+              and gender=#{gender}
+          </if>
+      </where>
     </select>
 
     <select id="getEmpsByConditionOne" resultType="Emp">
