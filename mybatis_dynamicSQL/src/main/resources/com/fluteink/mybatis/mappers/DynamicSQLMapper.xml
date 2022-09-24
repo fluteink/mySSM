@@ -3,5 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fluteink.mybatis.mappers.DynamicSQLMapper">
+<!--    List<Emp> getEmpsByCondition(Emp emp);-->
 
+    <select id="getEmpsByCondition" resultType="Emp">
+        select * from t_emp where 
+        <if test=""></if>
+    </select>
 </mapper>
