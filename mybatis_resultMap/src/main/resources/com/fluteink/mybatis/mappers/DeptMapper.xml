@@ -27,7 +27,10 @@
         where t_dept.dept_id = #{deptId}
     </select>
 <!--    Dept getDeptAndEmpByStepOne(@Param("deptId") Integer deptId);-->
-<select id="getDeptAndEmpByStepOne" resultMap="">
+    <resultMap id="DeptAndEmpResultMapByStep" type="Dept">
+
+    </resultMap>
+<select id="getDeptAndEmpByStepOne" resultMap="DeptAndEmpResultMapByStep">
     select * from t_dept where dept_id = #{deptId}
 </select>
 </mapper>
