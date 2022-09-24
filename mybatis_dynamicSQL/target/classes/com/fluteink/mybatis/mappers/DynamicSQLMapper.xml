@@ -11,7 +11,7 @@
             emp_name=#{empName}
           </if>
           <if test="age != null and age != ''">
-              and age = #{age}
+            and age = #{age}
           </if>
           <if test="gender != null and gender != ''">
               and gender=#{gender}
