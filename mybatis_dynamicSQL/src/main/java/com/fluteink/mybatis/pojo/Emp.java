@@ -23,6 +23,13 @@ public class Emp {
                 '}';
     }
 
+    public Emp(Integer empId, String empName, Integer age, String gender) {
+        this.empId = empId;
+        this.empName = empName;
+        this.age = age;
+        this.gender = gender;
+    }
+
     public Integer getEmpId() {
         return empId;
     }
