@@ -5,9 +5,9 @@
 <mapper namespace="com.fluteink.mybatis.mappers.DynamicSQLMapper">
     <!--    List<Emp> getEmpsByCondition(Emp emp);-->
     <select id="getEmpsByCondition" resultType="Emp">
-        select * from t_emp where 1=1
+        select * from t_emp where
         <if test="empName != null and empName != '' ">
-           and emp_name=#{empName}
+         emp_name=#{empName}
         </if>
         <if test="age != null and age != ''">
             and age = #{age}
