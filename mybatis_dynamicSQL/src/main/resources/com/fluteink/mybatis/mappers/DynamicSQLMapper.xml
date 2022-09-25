@@ -70,4 +70,13 @@
             (null,#{emp.empName},#{emp.age},#{emp.gender},null)
         </foreach>
     </insert>
+<!--    void deleteEmpsOne(@Param("empIds") Integer[] empIds);-->
+<delete id="deleteEmpsOne">
+    delete from t_emp where emp_id in
+(
+    <foreach collection="empIds" item="empId" separator=",">
+        #{empId}
+    </foreach>
+    )
+</delete>
 </mapper>

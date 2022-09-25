@@ -14,4 +14,5 @@ public interface DynamicSQLMapper
     List<Emp> getEmpsByCondition(Emp emp);
     List<Emp> getEmpsByChoose(Emp emp);
     void insertEmps(@Param("emps") List<Emp> emps);
+    void deleteEmpsOne(@Param("empIds") Integer[] empIds);
 }

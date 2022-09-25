@@ -3,6 +3,7 @@ package com.fluteink.mybatis.test;
 import com.fluteink.mybatis.mappers.DynamicSQLMapper;
 import com.fluteink.mybatis.pojo.Emp;
 import com.fluteink.mybatis.utils.SqlSessionUtil;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -34,12 +35,21 @@ public class DynamicMapperTest {
     }
 
     @Test
-    public void insertEmps() {
+    public void testinsertEmps() {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
         Emp emp = new Emp(null, "xiaoming", 20, "男");
         Emp emp2 = new Emp(null, "wanghan", 20, "女");
         List<Emp> emps = Arrays.asList(emp, emp2);
         mapper.insertEmps(emps);
+    }
+
+    //    <!--    void deleteEmpsOne(@Param("empIds") Integer[] empIds);-->
+    @Test
+    public void testdeleteEmpsOne() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Integer[] a = {7, 8};
+        mapper.deleteEmpsOne(a);
     }
 }
