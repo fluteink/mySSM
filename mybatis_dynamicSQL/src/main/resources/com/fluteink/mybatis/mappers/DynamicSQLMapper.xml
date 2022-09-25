@@ -79,4 +79,11 @@
     </foreach>
 
 </delete>
+<!--    void deleteEmpsTwo(@Param("empIds") Integer[] empIds);-->
+<delete id="deleteEmpsTwo">
+    delete from t_emp where
+    <foreach collection="empIds" item="empId" separator="or">
+        emp_id=#{empId}
+    </foreach>
+</delete>
 </mapper>
