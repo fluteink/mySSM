@@ -6,6 +6,8 @@ import com.fluteink.mybatis.utils.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -29,5 +31,15 @@ public class DynamicMapperTest {
         Emp emp = new Emp(null, "张三", null, "男");
         List<Emp> empsByChoose = mapper.getEmpsByChoose(emp);
         empsByChoose.forEach(System.out::println);
+    }
+
+    @Test
+    public void insertEmps() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Emp emp = new Emp(null, "xiaoming", 20, "男");
+        Emp emp2 = new Emp(null, "wanghan", 20, "女");
+        List<Emp> emps = Arrays.asList(emp, emp2);
+        mapper.insertEmps(emps);
     }
 }
