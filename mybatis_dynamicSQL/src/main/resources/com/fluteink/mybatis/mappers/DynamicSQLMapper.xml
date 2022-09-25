@@ -18,6 +18,20 @@
           </if>
       </where>
     </select>
+    <select id="getEmpsByConditionTwo" resultType="Emp">
+        select * from t_emp
+      <where>
+          <if test="empName != null and empName != '' ">
+            emp_name=#{empName}
+          </if>
+          <if test="age != null and age != ''">
+            and age = #{age}
+          </if>
+          <if test="gender != null and gender != ''">
+              and gender=#{gender}
+          </if>
+      </where>
+    </select>
 
     <select id="getEmpsByConditionOne" resultType="Emp">
         select * from t_emp where 1=1
