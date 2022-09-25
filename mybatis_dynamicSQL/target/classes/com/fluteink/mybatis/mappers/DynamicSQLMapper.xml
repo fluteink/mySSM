@@ -73,10 +73,10 @@
 <!--    void deleteEmpsOne(@Param("empIds") Integer[] empIds);-->
 <delete id="deleteEmpsOne">
     delete from t_emp where emp_id in
-(
-    <foreach collection="empIds" item="empId" separator=",">
+
+    <foreach collection="empIds" item="empId" separator="," open="(" close=")">
         #{empId}
     </foreach>
-    )
+
 </delete>
 </mapper>
