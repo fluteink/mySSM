@@ -6,37 +6,37 @@
     <!--    List<Emp> getEmpsByCondition(Emp emp);-->
     <select id="getEmpsByCondition" resultType="Emp">
         select * from t_emp
-      <trim prefix="where" suffixOverrides="and">
-          <if test="empName != null and empName != '' ">
-            emp_name=#{empName}  and
-          </if>
-          <if test="age != null and age != ''">
-            age = #{age} and
-          </if>
-          <if test="gender != null and gender != ''">
-               gender=#{gender}
-          </if>
-      </trim>
+        <trim prefix="where" suffixOverrides="and">
+            <if test="empName != null and empName != '' ">
+                emp_name=#{empName} and
+            </if>
+            <if test="age != null and age != ''">
+                age = #{age} and
+            </if>
+            <if test="gender != null and gender != ''">
+                gender=#{gender}
+            </if>
+        </trim>
     </select>
     <select id="getEmpsByConditionTwo" resultType="Emp">
         select * from t_emp
-      <where>
-          <if test="empName != null and empName != '' ">
-            emp_name=#{empName}
-          </if>
-          <if test="age != null and age != ''">
-            and age = #{age}
-          </if>
-          <if test="gender != null and gender != ''">
-              and gender=#{gender}
-          </if>
-      </where>
+        <where>
+            <if test="empName != null and empName != '' ">
+                emp_name=#{empName}
+            </if>
+            <if test="age != null and age != ''">
+                and age = #{age}
+            </if>
+            <if test="gender != null and gender != ''">
+                and gender=#{gender}
+            </if>
+        </where>
     </select>
 
     <select id="getEmpsByConditionOne" resultType="Emp">
         select * from t_emp where 1=1
         <if test="empName != null and empName != '' ">
-           and emp_name=#{empName}
+            and emp_name=#{empName}
         </if>
         <if test="age != null and age != ''">
             and age = #{age}
@@ -44,5 +44,22 @@
         <if test="gender != null and gender != ''">
             and gender=#{gender}
         </if>
+    </select>
+    <!--    List<Emp> getEmpsByChoose(Emp emp);-->
+    <select id="getEmpsByChoose" resultType="Emp">
+        select * from t_emp
+        <where>
+            <choose>
+                <when test="empName != null and empName != ''">
+                    emp_name=#{empName}
+                </when>
+                <when test="age != null and age != ''">
+                    age=#{age}
+                </when>
+                <when test="gender != null and gender != ''">
+                    gender=#{gender}
+                </when>
+            </choose>
+        </where>
     </select>
 </mapper>
