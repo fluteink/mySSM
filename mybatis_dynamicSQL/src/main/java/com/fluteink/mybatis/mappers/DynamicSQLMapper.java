@@ -1,6 +1,7 @@
 package com.fluteink.mybatis.mappers;
 
 import com.fluteink.mybatis.pojo.Emp;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,5 +13,5 @@ public interface DynamicSQLMapper
 {
     List<Emp> getEmpsByCondition(Emp emp);
     List<Emp> getEmpsByChoose(Emp emp);
-    void insertEmps(List<Emp> emps);
+    void insertEmps(@Param("emps") List<Emp> emps);
 }

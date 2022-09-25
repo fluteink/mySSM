@@ -62,4 +62,11 @@
             </choose>
         </where>
     </select>
+    <!--    void insertEmps(List<Emp> emps);-->
+    <insert id="insertEmps">
+        insert into t_emp
+        <foreach collection="emps" item="emp" separator=",">
+            (null,#{emp.empName},#{emp.age},#{emp.gender},null)
+        </foreach>
+    </insert>
 </mapper>
