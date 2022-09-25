@@ -6,15 +6,15 @@
     <!--    List<Emp> getEmpsByCondition(Emp emp);-->
     <select id="getEmpsByCondition" resultType="Emp">
         select * from t_emp
-      <trim >
+      <trim prefix="where" suffixOverrides="and">
           <if test="empName != null and empName != '' ">
-            emp_name=#{empName}
+            emp_name=#{empName}  and
           </if>
           <if test="age != null and age != ''">
-            and age = #{age}
+            age = #{age} and
           </if>
           <if test="gender != null and gender != ''">
-              and gender=#{gender}
+               gender=#{gender}
           </if>
       </trim>
     </select>
