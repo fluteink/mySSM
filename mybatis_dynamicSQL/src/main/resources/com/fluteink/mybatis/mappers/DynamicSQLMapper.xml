@@ -6,7 +6,7 @@
     <!--    List<Emp> getEmpsByCondition(Emp emp);-->
     <select id="getEmpsByCondition" resultType="Emp">
         select * from t_emp
-      <where>
+      <trim >
           <if test="empName != null and empName != '' ">
             emp_name=#{empName}
           </if>
@@ -16,7 +16,7 @@
           <if test="gender != null and gender != ''">
               and gender=#{gender}
           </if>
-      </where>
+      </trim>
     </select>
     <select id="getEmpsByConditionTwo" resultType="Emp">
         select * from t_emp
