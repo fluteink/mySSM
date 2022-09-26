@@ -52,12 +52,13 @@ public class DynamicMapperTest {
         Integer[] a = {7, 8};
         mapper.deleteEmpsOne(a);
     }
-//    void deleteEmpsTwo(@Param("empIds") Integer[] empIds);
-@Test
-public void testdeleteEmpsTwo() {
-    SqlSession sqlSession = SqlSessionUtil.getSqlSession();
-    DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
-    Integer[] a = {9, 10};
-mapper.deleteEmpsTwo(a);
-}
+
+    //    void deleteEmpsTwo(@Param("empIds") Integer[] empIds);
+    @Test
+    public void testdeleteEmpsTwo() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Integer[] a = {9, 10};
+        mapper.deleteEmpsTwo(a);
+    }
 }
