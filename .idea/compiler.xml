@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis_parameter" />
         <module name="mybatis_resultMap" />
+        <module name="mybatis_mbg" />
         <module name="mybatis_dynamicSQL" />
         <module name="mybatis_helloworld" />
         <module name="mybatis_cache" />
@@ -17,6 +18,7 @@
       <module name="mybatis_cache" target="11" />
       <module name="mybatis_dynamicSQL" target="11" />
       <module name="mybatis_helloworld" target="11" />
+      <module name="mybatis_mbg" target="11" />
       <module name="mybatis_parameter" target="11" />
       <module name="mybatis_resultMap" target="11" />
     </bytecodeTargetLevel>
@@ -27,6 +29,7 @@
       <module name="mybatis_cache" options="" />
       <module name="mybatis_dynamicSQL" options="" />
       <module name="mybatis_helloworld" options="" />
+      <module name="mybatis_mbg" options="" />
       <module name="mybatis_parameter" options="" />
       <module name="mybatis_resultMap" options="" />
     </option>
