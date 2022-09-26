@@ -17,5 +17,7 @@ public class CacheMapperTest {
         CacheMapper mapper = sqlSession.getMapper(CacheMapper.class);
         Emp emp = mapper.getEmpByEmpId(1);
         System.out.println(emp);
+        Emp emp2 = mapper.getEmpByEmpId(1);
+        System.out.println(emp2);
     }
 }
