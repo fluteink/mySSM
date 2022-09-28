@@ -28,6 +28,6 @@ public class MBGTest {
 //        List<Emp> emps = mapper.selectByExample(empExample);
 //        emps.forEach(System.out::println);
         Emp emp = new Emp(1, "小黑", null, "女");
-        mapper.updateByPrimaryKey(emp);
+        mapper.updateByPrimaryKeySelective(emp);
     }
 }
