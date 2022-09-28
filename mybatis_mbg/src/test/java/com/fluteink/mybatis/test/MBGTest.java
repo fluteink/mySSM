@@ -22,10 +22,12 @@ public class MBGTest {
 //        System.out.println(emp);
 //        List<Emp> emps = mapper.selectByExample(null);
 //        System.out.println(emps);
-        EmpExample empExample = new EmpExample();
-        empExample.createCriteria().andEmpNameLike("张三").andAgeGreaterThanOrEqualTo(20);
-        empExample.or().andGenderEqualTo("男");
-        List<Emp> emps = mapper.selectByExample(empExample);
-        emps.forEach(System.out::println);
+//        EmpExample empExample = new EmpExample();
+//        empExample.createCriteria().andEmpNameLike("张三").andAgeGreaterThanOrEqualTo(20);
+//        empExample.or().andGenderEqualTo("男");
+//        List<Emp> emps = mapper.selectByExample(empExample);
+//        emps.forEach(System.out::println);
+        Emp emp = new Emp(1, "小黑", null, "女");
+        mapper.updateByPrimaryKey(emp);
     }
 }
