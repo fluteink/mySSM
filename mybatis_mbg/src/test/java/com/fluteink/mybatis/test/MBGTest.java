@@ -24,7 +24,8 @@ public class MBGTest {
 //        System.out.println(emps);
         EmpExample empExample = new EmpExample();
         empExample.createCriteria().andEmpNameLike("张三").andAgeGreaterThanOrEqualTo(20);
+        empExample.or().andGenderEqualTo("男");
         List<Emp> emps = mapper.selectByExample(empExample);
-        System.out.println(emps);
+        emps.forEach(System.out::println);
     }
 }
