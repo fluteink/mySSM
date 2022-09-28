@@ -26,7 +26,7 @@ public class MBGTest {
 //        empExample.createCriteria().andEmpNameLike("张三").andAgeGreaterThanOrEqualTo(20);
 //        empExample.or().andGenderEqualTo("男");
 //        List<Emp> emps = mapper.selectByExample(empExample);
-//        emps.forEach(System.out::println);
+//        emps.forEach(System.out::println)
         Emp emp = new Emp(1, "小黑", null, "女");
         mapper.updateByPrimaryKeySelective(emp);
     }
