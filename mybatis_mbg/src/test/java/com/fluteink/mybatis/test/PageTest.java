@@ -20,7 +20,7 @@ public class PageTest {
     public void testPage()  {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
-        Page<Object> page = PageHelper.startPage(2, 4);
+        Page<Object> page = PageHelper.startPage(1, 4);
         List<Emp> emps = mapper.selectByExample(null);
         PageInfo<Emp> PageInfo = new PageInfo<>(emps, 5);
         emps.forEach(System.out::println);
