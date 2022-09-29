@@ -21,6 +21,7 @@ public class PageTest {
         PageHelper.startPage(2,4);
         List<Emp> emps = mapper.selectByExample(null);
         emps.forEach(System.out::println);
+        System.out.println(emps);
 
     }
 }
