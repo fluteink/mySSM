@@ -29,5 +29,6 @@ public class MBGTest {
 //        emps.forEach(System.out::println)
         Emp emp = new Emp(1, "小黑", null, "女");
         mapper.updateByPrimaryKeySelective(emp);
+
     }
 }
