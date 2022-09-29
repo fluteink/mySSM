@@ -5,6 +5,7 @@ import com.fluteink.mybatis.pojo.Emp;
 import com.fluteink.mybatis.utils.SqlSessionUtil;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -21,8 +22,9 @@ public class PageTest {
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         Page<Object> page = PageHelper.startPage(2, 4);
         List<Emp> emps = mapper.selectByExample(null);
+        PageInfo<Emp> PageInfo = new PageInfo<>(emps, 5);
         emps.forEach(System.out::println);
-        System.out.println(page);
+        System.out.println(PageInfo);
 
     }
 }
