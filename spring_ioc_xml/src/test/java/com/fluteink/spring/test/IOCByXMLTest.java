@@ -1,5 +1,6 @@
 package com.fluteink.spring.test;
 
+import com.fluteink.spring.pojo.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,5 +13,8 @@ public class IOCByXMLTest {
     @Test
     public void testIOCByXML(){
         ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Student stu = (Student) ioc.getBean("studentOne");
+        System.out.println(stu);
+
     }
 }
