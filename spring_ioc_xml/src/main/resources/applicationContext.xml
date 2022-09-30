@@ -10,4 +10,10 @@
     </bean>
     <bean id="studentTwo" class="com.fluteink.spring.pojo.Student">
     </bean>
+    <bean id="studentThree" class="com.fluteink.spring.pojo.Student">
+        <constructor-arg value="1002"/>
+        <constructor-arg value="1002"/>
+        <constructor-arg value="1002"/>
+        <constructor-arg value="1002"/>
+    </bean>
 </beans>

@@ -19,7 +19,7 @@ public class IOCByXMLTest {
     @Test
     public void testDI() {
         ApplicationContext ioc=new ClassPathXmlApplicationContext("applicationContext.xml");
-        Student student = ioc.getBean("studentOne", Student.class);
+        Student student = ioc.getBean("studentThree", Student.class);
         System.out.println(student);
     }
 }

@@ -8,4 +8,12 @@
         <property name="sname" value="张三"/>
         <property name="gender" value="男"/>
     </bean>
+    <bean id="studentTwo" class="com.fluteink.spring.pojo.Student">
+    </bean>
+    <bean id="studentThree" class="com.fluteink.spring.pojo.Student">
+        <constructor-arg value="1002"/>
+        <constructor-arg value="1002"/>
+        <constructor-arg value="1002"/>
+        <constructor-arg value="1002"/>
+    </bean>
 </beans>
