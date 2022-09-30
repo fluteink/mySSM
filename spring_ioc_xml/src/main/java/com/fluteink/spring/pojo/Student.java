@@ -9,6 +9,23 @@ public class Student {
     private String sname;
     private Integer age;
     private String gender;
+    private Double score;
+
+    public Student(Integer sid, String sname, Integer age, String gender, Double score) {
+        this.sid = sid;
+        this.sname = sname;
+        this.age = age;
+        this.gender = gender;
+        this.score = score;
+    }
+
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    }
 
     public Integer getSid() {
         return sid;
