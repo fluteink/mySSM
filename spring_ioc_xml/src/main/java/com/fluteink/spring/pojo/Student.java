@@ -69,10 +69,10 @@ public class Student {
         this.gender = gender;
     }
 
-    public Student(Integer sid, String sname, Integer age, String gender) {
+    public Student(Integer sid, String sname,  String gender,Double score) {
         this.sid = sid;
         this.sname = sname;
-        this.age = age;
+        this.score=score;
         this.gender = gender;
     }
 
