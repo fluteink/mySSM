@@ -77,6 +77,7 @@ public class Student {
         this.sname = sname;
         this.score=score;
         this.gender = gender;
+
     }
 
     public Student() {
