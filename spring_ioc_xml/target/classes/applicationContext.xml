@@ -19,7 +19,9 @@
     <bean id="studentFour" class="com.fluteink.spring.pojo.Student">
         <property name="sid" value="1003"/>
         <property name="sname" value="王五"/>
-        <property name="gender" value="null"/>
+        <property name="gender">
+            <null></null>
+        </property>
 
     </bean>
 </beans>
