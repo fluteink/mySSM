@@ -19,6 +19,9 @@ public class Student {
         this.score = score;
     }
 
+    public Student(String s, String s2, String s23, String age) {
+    }
+
     public Double getScore() {
         return score;
     }
