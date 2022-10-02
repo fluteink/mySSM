@@ -1,5 +1,7 @@
 package com.fluteink.spring.pojo;
 
+import java.util.Arrays;
+
 /**
  * @author 明宇
  * @version 1.0
@@ -10,6 +12,7 @@ public class Student {
     private Integer age;
     private String gender;
     private Double score;
+    private String[] hobby;
     private Clazz clazz;
 
     public Student(Integer sid, String sname, Integer age, String gender, Double score, Clazz clazz) {
@@ -21,14 +24,6 @@ public class Student {
         this.clazz = clazz;
     }
 
-    public Clazz getClazz() {
-        return clazz;
-    }
-
-    public void setClazz(Clazz clazz) {
-        this.clazz = clazz;
-    }
-
     @Override
     public String toString() {
         return "Student{" +
@@ -37,8 +32,35 @@ public class Student {
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", score=" + score +
+                ", hobby=" + Arrays.toString(hobby) +
                 ", clazz=" + clazz +
                 '}';
+    }
+
+    public String[] getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String[] hobby) {
+        this.hobby = hobby;
+    }
+
+    public Student(Integer sid, String sname, Integer age, String gender, Double score, String[] hobby, Clazz clazz) {
+        this.sid = sid;
+        this.sname = sname;
+        this.age = age;
+        this.gender = gender;
+        this.score = score;
+        this.hobby = hobby;
+        this.clazz = clazz;
+    }
+
+    public Clazz getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Clazz clazz) {
+        this.clazz = clazz;
     }
 
     public Student(Integer sid, String sname, Integer age, String gender, Double score) {
