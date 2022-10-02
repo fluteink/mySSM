@@ -1,6 +1,7 @@
 package com.fluteink.spring.test;
 
 import com.fluteink.spring.Utils.IOCUtil;
+import com.fluteink.spring.pojo.Clazz;
 import com.fluteink.spring.pojo.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -35,5 +36,11 @@ public class IOCByXMLTest {
         Student studentFive = ioc.getBean("studentFive", Student.class);
         System.out.println(studentFive);
 
+    }
+    @Test
+    public void testDI4() {
+        ApplicationContext ioc = IOCUtil.getIOC();
+        Clazz clazzOne = ioc.getBean("clazzOne", Clazz.class);
+        System.out.println(clazzOne);
     }
 }

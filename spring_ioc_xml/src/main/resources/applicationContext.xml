@@ -53,6 +53,15 @@
     <bean id="clazzOne" class="com.fluteink.spring.pojo.Clazz">
         <property name="cid" value="1111"/>
         <property name="cname" value="最强王者班"/>
+        <property name="students">
+            <list>
+                <ref bean="studentOne"></ref>
+                <ref bean="studentTwo"></ref>
+                <ref bean="studentThree"></ref>
+                <ref bean="studentFour"></ref>
+                <ref bean="studentFive"></ref>
+            </list>
+        </property>
     </bean>
 
 </beans>
