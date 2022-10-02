@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
     <bean id="studentOne" class="com.fluteink.spring.pojo.Student">
         <property name="sid" value="1001"/>
         <property name="age" value="20"/>
@@ -53,15 +53,14 @@
     <bean id="clazzOne" class="com.fluteink.spring.pojo.Clazz">
         <property name="cid" value="1111"/>
         <property name="cname" value="最强王者班"/>
-        <property name="students">
-            <list>
-                <ref bean="studentOne"></ref>
-                <ref bean="studentTwo"></ref>
-                <ref bean="studentThree"></ref>
-                <ref bean="studentFour"></ref>
-                <ref bean="studentFive"></ref>
-            </list>
-        </property>
+        <property name="students" ref="studentList"/>
     </bean>
+    <util:list id="studentList">
+        <ref bean="studentOne"></ref>
+        <ref bean="studentTwo"></ref>
+        <ref bean="studentThree"></ref>
+        <ref bean="studentFour"></ref>
+        <ref bean="studentFive"></ref>
+    </util:list>
 
 </beans>
