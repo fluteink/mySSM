@@ -41,6 +41,13 @@
                 <property name="cname" value="太容易"/>
             </bean>
         </property>
+        <property name="hobby">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
+        </property>
 
     </bean>
     <bean id="clazzOne" class="com.fluteink.spring.pojo.Clazz">
