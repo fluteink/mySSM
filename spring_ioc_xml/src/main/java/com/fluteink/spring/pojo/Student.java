@@ -10,6 +10,36 @@ public class Student {
     private Integer age;
     private String gender;
     private Double score;
+    private Clazz clazz;
+
+    public Student(Integer sid, String sname, Integer age, String gender, Double score, Clazz clazz) {
+        this.sid = sid;
+        this.sname = sname;
+        this.age = age;
+        this.gender = gender;
+        this.score = score;
+        this.clazz = clazz;
+    }
+
+    public Clazz getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Clazz clazz) {
+        this.clazz = clazz;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "sid=" + sid +
+                ", sname='" + sname + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", score=" + score +
+                ", clazz=" + clazz +
+                '}';
+    }
 
     public Student(Integer sid, String sname, Integer age, String gender, Double score) {
         this.sid = sid;
@@ -32,16 +62,6 @@ public class Student {
 
     public Integer getSid() {
         return sid;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "sid=" + sid +
-                ", sname='" + sname + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                '}';
     }
 
     public void setSid(Integer sid) {
