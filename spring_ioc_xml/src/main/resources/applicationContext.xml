@@ -18,7 +18,14 @@
     </bean>
     <bean id="studentFour" class="com.fluteink.spring.pojo.Student">
         <property name="sid" value="1003"/>
-        <property name="sname" value="&lt;王五&gt;"/>
+<!--        <property name="sname" value="&lt;王五&gt;"/>-->
+        <property name="sname" >
+            <value>
+                <![CDATA[
+
+                ]]>
+            </value>
+        </property>
         <property name="gender">
             <null/>
         </property>
