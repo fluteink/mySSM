@@ -29,4 +29,11 @@ public class IOCByXMLTest {
         Student studentFour = ioc.getBean("studentFour", Student.class);
         System.out.println(studentFour);
     }
+    @Test
+    public void testDI3() {
+        ApplicationContext ioc = IOCUtil.getIOC();
+        Student studentFive = ioc.getBean("studentFive", Student.class);
+        System.out.println(studentFive);
+
+    }
 }
