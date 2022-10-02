@@ -20,7 +20,7 @@
         <property name="sid" value="1003"/>
         <property name="sname" value="王五"/>
         <property name="gender">
-            <null></null>
+            <null/>
         </property>
 
     </bean>

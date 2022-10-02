@@ -27,6 +27,6 @@ public class IOCByXMLTest {
     public void testDI2() {
         ApplicationContext ioc = IOCUtil.getIOC();
         Student studentFour = ioc.getBean("studentFour", Student.class);
-        System.out.println(studentFour);
+        System.out.println(studentFour.getGender());
     }
 }
