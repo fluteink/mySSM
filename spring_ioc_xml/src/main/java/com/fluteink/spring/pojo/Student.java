@@ -1,6 +1,7 @@
 package com.fluteink.spring.pojo;
 
 import java.util.Arrays;
+import java.util.Map;
 
 /**
  * @author 明宇
@@ -14,6 +15,7 @@ public class Student {
     private Double score;
     private String[] hobby;
     private Clazz clazz;
+    private Map<String,Teacher> teacherMap;
 
     public Student(Integer sid, String sname, Integer age, String gender, Double score, Clazz clazz) {
         this.sid = sid;
