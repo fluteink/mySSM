@@ -15,16 +15,6 @@ public class Student {
     private Double score;
     private String[] hobby;
     private Clazz clazz;
-    private Map<String,Teacher> teacherMap;
-
-    public Student(Integer sid, String sname, Integer age, String gender, Double score, Clazz clazz) {
-        this.sid = sid;
-        this.sname = sname;
-        this.age = age;
-        this.gender = gender;
-        this.score = score;
-        this.clazz = clazz;
-    }
 
     @Override
     public String toString() {
@@ -36,7 +26,27 @@ public class Student {
                 ", score=" + score +
                 ", hobby=" + Arrays.toString(hobby) +
                 ", clazz=" + clazz +
+                ", teacherMap=" + teacherMap +
                 '}';
+    }
+
+    public Map<String, Teacher> getTeacherMap() {
+        return teacherMap;
+    }
+
+    public void setTeacherMap(Map<String, Teacher> teacherMap) {
+        this.teacherMap = teacherMap;
+    }
+
+    private Map<String,Teacher> teacherMap;
+
+    public Student(Integer sid, String sname, Integer age, String gender, Double score, Clazz clazz) {
+        this.sid = sid;
+        this.sname = sname;
+        this.age = age;
+        this.gender = gender;
+        this.score = score;
+        this.clazz = clazz;
     }
 
     public String[] getHobby() {
