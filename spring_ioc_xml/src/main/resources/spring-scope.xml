@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="student" class="com.fluteink.spring.pojo.Student" scope="prototype">
+    <bean id="student" class="com.fluteink.spring.pojo.Student" scope="singleton">
         <property name="sid" value="1001"></property>
         <property name="sname" value="zhnagshan"></property>
     </bean>
