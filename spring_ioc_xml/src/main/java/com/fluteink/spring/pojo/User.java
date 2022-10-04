@@ -11,6 +11,7 @@ public class User {
     private Integer age;
 
     public User() {
+        System.out.println("生命1：实例化");
     }
 
     public User(Integer id, String username, String password, Integer age) {
@@ -25,6 +26,9 @@ public class User {
     }
 
     public void setId(Integer id) {
+        System.out.println("依赖注入");
+
+
         this.id = id;
     }
 
@@ -60,5 +64,13 @@ public class User {
                 ", password='" + password + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public void initMethod() {
+        System.out.println("3,初始化");
+    }
+
+    public void destoryMethod() {
+        System.out.println("4,销毁");
     }
 }
