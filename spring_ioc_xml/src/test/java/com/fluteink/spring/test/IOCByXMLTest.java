@@ -13,17 +13,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class IOCByXMLTest {
     @Test
-    public void testIOCByXML(){
+    public void testIOCByXML() {
         ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
         Student stu = (Student) ioc.getBean("studentOne");
         System.out.println(stu);
     }
+
     @Test
     public void testDI() {
-        ApplicationContext ioc=new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
         Student student = ioc.getBean("studentThree", Student.class);
         System.out.println(student);
     }
+
     @Test
     public void testDI2() {
         ApplicationContext ioc = IOCUtil.getIOC();
@@ -31,6 +33,7 @@ public class IOCByXMLTest {
         System.out.println(studentFour);
 
     }
+
     @Test
     public void testDI3() {
         ApplicationContext ioc = IOCUtil.getIOC();
@@ -38,10 +41,18 @@ public class IOCByXMLTest {
         System.out.println(studentFive);
 
     }
+
     @Test
     public void testDI4() {
         ApplicationContext ioc = IOCUtil.getIOC();
         Clazz clazzOne = ioc.getBean("clazzOne", Clazz.class);
         System.out.println(clazzOne);
+    }
+
+    @Test
+    public void testDI5() {
+        ApplicationContext ioc = IOCUtil.getIOC();
+        Student studentFive = ioc.getBean("studentSix", Student.class);
+        System.out.println(studentFive);
     }
 }
