@@ -1,5 +1,6 @@
 package com.fluteink.spring.controller;
 
+import com.fluteink.spring.service.UserService;
 import com.fluteink.spring.service.impl.UserServiceImpl;
 
 /**
@@ -7,5 +8,5 @@ import com.fluteink.spring.service.impl.UserServiceImpl;
  * @version 1.0
  */
 public class UserController {
-
+    private UserService userService = new UserServiceImpl();
 }
