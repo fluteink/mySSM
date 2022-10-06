@@ -17,6 +17,5 @@ public class ScopeTest {
         Student student2 = ioc.getBean(Student.class);
         System.out.println(student1.hashCode());
         System.out.println(student2.hashCode());
-        System.out.println(student2.hashCode());
     }
 }
