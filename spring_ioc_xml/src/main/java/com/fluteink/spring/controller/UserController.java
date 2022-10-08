@@ -9,5 +9,4 @@ import com.fluteink.spring.service.impl.UserServiceImpl;
  */
 public class UserController {
     private UserService userService = new UserServiceImpl();
-
 }
