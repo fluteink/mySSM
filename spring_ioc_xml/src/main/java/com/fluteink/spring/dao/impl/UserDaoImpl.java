@@ -9,4 +9,8 @@ import com.fluteink.spring.dao.UserDao;
 public class UserDaoImpl implements UserDao {
 
 
+    @Override
+    public void saveUser() {
+        System.out.println("Save Success!");
+    }
 }
