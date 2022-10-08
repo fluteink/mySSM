@@ -2,12 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean  id="userController" class="com.fluteink.spring.controller.UserController">
-        <property name="userService" ref="userService"/>
+    <bean  id="userController" class="com.fluteink.spring.controller.UserController" autowire="byType">
+<!--        <property name="userService" ref="userService"/>-->
     </bean>
 
-    <bean  id="userService" class="com.fluteink.spring.service.impl.UserServiceImpl">
-        <property name="userDao" ref="userDao"/>
+    <bean  id="userService" class="com.fluteink.spring.service.impl.UserServiceImpl" autowire="byType">
+<!--        <property name="userDao" ref="userDao"/>-->
     </bean>
 
     <bean  id="userDao" class="com.fluteink.spring.dao.impl.UserDaoImpl">
