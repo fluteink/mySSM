@@ -8,5 +8,15 @@ import com.fluteink.spring.service.impl.UserServiceImpl;
  * @version 1.0
  */
 public class UserController {
-    private UserService userService = new UserServiceImpl();
+
+
+    private UserService userService;
+
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 }
