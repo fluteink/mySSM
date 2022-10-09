@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_helloworld" />
+        <module name="spring-proxy" />
         <module name="mybatis_resultMap" />
         <module name="mybatis_helloworld" />
         <module name="mybatis_parameter" />
@@ -24,6 +25,7 @@
       <module name="mybatis_mbg" target="11" />
       <module name="mybatis_parameter" target="11" />
       <module name="mybatis_resultMap" target="11" />
+      <module name="spring-proxy" target="11" />
       <module name="spring_helloworld" target="11" />
       <module name="spring_ioc_annotation" target="11" />
       <module name="spring_ioc_xml" target="11" />
@@ -38,6 +40,7 @@
       <module name="mybatis_mbg" options="" />
       <module name="mybatis_parameter" options="" />
       <module name="mybatis_resultMap" options="" />
+      <module name="spring-proxy" options="" />
       <module name="spring_helloworld" options="" />
       <module name="spring_ioc_annotation" options="" />
       <module name="spring_ioc_xml" options="" />
