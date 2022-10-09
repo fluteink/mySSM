@@ -5,4 +5,5 @@ package com.fluteink.spring.service;
  * @version 1.0
  */
 public interface UserService {
+    void saveUser();
 }
