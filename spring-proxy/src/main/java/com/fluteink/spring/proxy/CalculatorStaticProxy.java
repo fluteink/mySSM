@@ -6,7 +6,7 @@ package com.fluteink.spring.proxy;
  */
 public class CalculatorStaticProxy implements Calculator {
     // 将被代理的目标对象声明为成员变量
-    private Calculator target;
+    private final Calculator target;
 
     public CalculatorStaticProxy(Calculator target) {
         this.target = target;
