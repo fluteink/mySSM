@@ -38,6 +38,8 @@ public class CalculatorStaticProxy implements Calculator {
         return Result;
     }
 
+
+
     @Override
     public int div(int i, int j) {
         System.out.println("[日志] div 方法开始了，参数是：" + i + "," + j);
