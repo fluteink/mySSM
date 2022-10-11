@@ -4,6 +4,7 @@ import com.fluteink.spring.dao.BookDao;
 import com.fluteink.spring.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -19,6 +20,7 @@ public class BookServiceImpl implements BookService {
 //            timeout = 3,
 //            noRollbackFor = ArithmeticException.class
 //            noRollbackForClassName = "java.lang.ArithmeticException"
+            isolation = Isolation.DEFAULT
     )
     public void buyBook(Integer userId, Integer bookId) {
 //        try {
