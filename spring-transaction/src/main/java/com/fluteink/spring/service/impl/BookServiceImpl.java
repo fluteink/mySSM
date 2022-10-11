@@ -18,7 +18,7 @@ public class BookServiceImpl implements BookService {
     @Transactional(
 //            timeout = 3,
 //            noRollbackFor = ArithmeticException.class
-            noRollbackForClassName = "java.lang.ArithmeticException"
+//            noRollbackForClassName = "java.lang.ArithmeticException"
     )
     public void buyBook(Integer userId, Integer bookId) {
 //        try {
@@ -29,6 +29,6 @@ public class BookServiceImpl implements BookService {
         Integer price= bookDao.getPriceByBookId(bookId);
         bookDao.updateStock(bookId);
         bookDao.updateBalance(userId,price);
-        System.out.println(1/0);
+//        System.out.println(1/0);
     }
 }
