@@ -1,9 +1,12 @@
 package com.fluteink.spring.aop.annptation;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author 明宇
  * @version 1.0
  */
+@Component
 public class CalculatorImpl implements Calculator{
     @Override
     public int add(int i, int j) {
