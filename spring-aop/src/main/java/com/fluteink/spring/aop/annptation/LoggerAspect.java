@@ -29,8 +29,7 @@ public class LoggerAspect {
     @After("pointCut()")
     public void AfterAdviceMethod(JoinPoint joinPoint) {
         Signature signature = joinPoint.getSignature();
-        Object[] args = joinPoint.getArgs();
-        System.out.println("LoggerAspect,后置通知,方法"+signature.getName()+"参数"+ Arrays.toString(args));
+        System.out.println("LoggerAspect,后置通知,方法"+signature.getName()+"执行完毕");
 
     }
 
