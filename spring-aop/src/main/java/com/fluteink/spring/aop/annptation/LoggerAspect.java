@@ -15,4 +15,5 @@ public class LoggerAspect {
     public void BeforeAdviceMethod() {
         System.out.println("LoggerAspect,前置通知");
     }
+
 }
