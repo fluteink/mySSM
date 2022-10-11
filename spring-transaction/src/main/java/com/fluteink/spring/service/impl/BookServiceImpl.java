@@ -4,7 +4,6 @@ import com.fluteink.spring.dao.BookDao;
 import com.fluteink.spring.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -15,12 +14,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class BookServiceImpl implements BookService {
     @Autowired
     private BookDao bookDao;
+
     @Override
     @Transactional(
 //            timeout = 3,
 //            noRollbackFor = ArithmeticException.class
 //            noRollbackForClassName = "java.lang.ArithmeticException"
-            isolation = Isolation.DEFAULT
+//            isolation = Isolation.DEFAULT
+//            propagation = Propagation.REQUIRES_NEW
     )
     public void buyBook(Integer userId, Integer bookId) {
 /*
@@ -30,9 +31,9 @@ public class BookServiceImpl implements BookService {
             e.printStackTrace();
         }
 */
-        Integer price= bookDao.getPriceByBookId(bookId);
+        Integer price = bookDao.getPriceByBookId(bookId);
         bookDao.updateStock(bookId);
-        bookDao.updateBalance(userId,price);
+        bookDao.updateBalance(userId, price);
 //        System.out.println(1/0);
     }
 }
