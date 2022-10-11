@@ -21,4 +21,8 @@ public class JdbcTemplateTest {
         String sql = "insert into t_user values(null,?,?,?,?,?)";
         jdbcTemplate.update(sql, "root", "123", 23, "女", "123@qq.com");
     }
+    @Test
+    public void testGetUserById() {
+
+    }
 }
