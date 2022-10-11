@@ -9,8 +9,9 @@
         <module name="spring_helloworld" />
         <module name="spring-proxy" />
         <module name="mybatis_resultMap" />
-        <module name="spring-transaction" />
         <module name="mybatis_helloworld" />
+        <module name="spring_mvc_helloworld" />
+        <module name="spring-transaction" />
         <module name="mybatis_parameter" />
         <module name="mybatis_mbg" />
         <module name="spring-aop" />
@@ -20,20 +21,7 @@
         <module name="spring_ioc_annotation" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="mybatis_cache" target="11" />
-      <module name="mybatis_dynamicSQL" target="11" />
-      <module name="mybatis_helloworld" target="11" />
-      <module name="mybatis_mbg" target="11" />
-      <module name="mybatis_parameter" target="11" />
-      <module name="mybatis_resultMap" target="11" />
-      <module name="spring-aop" target="11" />
-      <module name="spring-proxy" target="11" />
-      <module name="spring-transaction" target="11" />
-      <module name="spring_helloworld" target="11" />
-      <module name="spring_ioc_annotation" target="11" />
-      <module name="spring_ioc_xml" target="11" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
@@ -50,6 +38,7 @@
       <module name="spring_helloworld" options="" />
       <module name="spring_ioc_annotation" options="" />
       <module name="spring_ioc_xml" options="" />
+      <module name="spring_mvc_helloworld" options="" />
     </option>
   </component>
 </project>
