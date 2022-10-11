@@ -23,11 +23,13 @@ public class BookServiceImpl implements BookService {
             isolation = Isolation.DEFAULT
     )
     public void buyBook(Integer userId, Integer bookId) {
-//        try {
-//            TimeUnit.SECONDS.sleep(5);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+/*
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+*/
         Integer price= bookDao.getPriceByBookId(bookId);
         bookDao.updateStock(bookId);
         bookDao.updateBalance(userId,price);
