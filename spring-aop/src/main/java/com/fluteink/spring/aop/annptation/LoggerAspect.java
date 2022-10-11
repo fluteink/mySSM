@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LoggerAspect {
-    @Before("execution(public int com.fluteink.spring.aop.annptation.CalculatorImpl.add(int, int))")
+//    @Before("execution(public int com.fluteink.spring.aop.annptation.CalculatorImpl.add(int, int))")
+    @Before("execution(* com.fluteink.spring.aop.annptation.CalculatorImpl.*(..))")
     public void BeforeAdviceMethod() {
         System.out.println("LoggerAspect,前置通知");
     }
