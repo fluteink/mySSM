@@ -15,9 +15,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class JdbcTemplateTest {
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
     @Test
     public void testInsert() {
-        String sql="insert into t_user values(null,?,?,?,?,?)";
-        jdbcTemplate.update(sql,"root","123",23,"女","123@qq.com");
+        String sql = "insert into t_user values(null,?,?,?,?,?)";
+        jdbcTemplate.update(sql, "root", "123", 23, "女", "123@qq.com");
     }
 }
