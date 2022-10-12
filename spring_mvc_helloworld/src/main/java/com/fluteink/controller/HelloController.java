@@ -1,6 +1,7 @@
 package com.fluteink.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author 明宇
@@ -8,4 +9,8 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class HelloController {
+    @RequestMapping("/")
+    public String protal(){
+        return "index";
+    }
 }
