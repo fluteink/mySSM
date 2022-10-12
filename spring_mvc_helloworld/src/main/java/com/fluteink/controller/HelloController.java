@@ -13,4 +13,8 @@ public class HelloController {
     public String protal(){
         return "index";
     }
+    @RequestMapping("/hello")
+    public String hello(){
+        return "success";
+    }
 }
