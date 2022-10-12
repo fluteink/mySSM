@@ -2,6 +2,7 @@ package com.fluteink.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * @author 明宇
@@ -11,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RequestMapping("/test")
 public class TestRequestMappingController {
 
-    @RequestMapping({"/hello","/abc"})
+    @RequestMapping(value = {"/hello","/abc"},
+            method = {RequestMethod.POST,RequestMethod.GET}
+    )
     public String hello(){
         return "success";
     }
