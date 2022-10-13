@@ -13,10 +13,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TestRequestMappingController {
 
     @RequestMapping(value = {"/hello","/abc"},
-            method = {RequestMethod.POST,RequestMethod.GET},
-            params = {"username"}
+            method = {RequestMethod.POST,RequestMethod.GET}
+//            params = {"username","!password","age=20","gender!=女"}
+//            headers = {"referer"}
+
     )
     public String hello(){
+        return "success";
+    }
+//    @RequestMapping("/a?a/test/ant")
+    @RequestMapping("/a*a/test/ant")
+    public String testAnt(){
         return "success";
     }
 }
