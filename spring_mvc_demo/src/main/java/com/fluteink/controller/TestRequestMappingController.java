@@ -1,6 +1,7 @@
 package com.fluteink.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -27,8 +28,9 @@ public class TestRequestMappingController {
     public String testAnt(){
         return "success";
     }
-    @RequestMapping("/test/rest/1")
-    public String testRest(){
+    @RequestMapping("/test/rest/{id}")
+    public String testRest(@PathVariable("id") Integer id){
+        System.out.println("id: "+id);
         return "success";
     }
 }
