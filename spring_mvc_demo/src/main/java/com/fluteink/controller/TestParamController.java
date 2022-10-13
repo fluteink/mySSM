@@ -1,6 +1,7 @@
 package com.fluteink.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -21,8 +22,9 @@ public class TestParamController {
     }
 
     @RequestMapping("/param")
-    public String getParam(@RequestParam(value = "userName",required = true ,defaultValue = "hello")  String username, String password) {
-        System.out.println("username:" + username + " password:" + password);
+    public String getParam(@RequestParam(value = "userName",required = true ,defaultValue = "hello")  String username,
+                           String password, @RequestHeader("referer") String referer) {
+        System.out.println("username:" + username + " password:" + password+"   referer:"+referer);
         return "success";
     }
 }
