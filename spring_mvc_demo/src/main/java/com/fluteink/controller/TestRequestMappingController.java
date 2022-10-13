@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TestRequestMappingController {
 
     @RequestMapping(value = {"/hello","/abc"},
-            method = {RequestMethod.POST,RequestMethod.GET}
+            method = {RequestMethod.POST,RequestMethod.GET},
+            params = {"username"}
     )
     public String hello(){
         return "success";
