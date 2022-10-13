@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 public class TestParamController {
-        @RequestMapping("/param/servletAPI")
+    @RequestMapping("/param/servletAPI")
     public String getParamByServletAPI(HttpServletRequest request) {
         HttpSession session = request.getSession();
         String username = request.getParameter("username");
@@ -25,13 +25,11 @@ public class TestParamController {
     }
 
     @RequestMapping("/param")
-    public String getParam(@RequestParam(value = "userName",required = true ,defaultValue = "hello")  String username,
+    public String getParam(@RequestParam(value = "userName", required = true, defaultValue = "hello") String username,
                            String password, @RequestHeader("referer") String referer,
-                           @CookieValue("JSESSIONID") String jsessionId)
-
-    {
-        System.out.println("jsessionId"+jsessionId);
-        System.out.println("username:" + username + " password:" + password+"   referer:"+referer);
+                           @CookieValue("JSESSIONID") String jsessionId) {
+        System.out.println("jsessionId" + jsessionId);
+        System.out.println("username:" + username + " password:" + password + "   referer:" + referer);
         return "success";
     }
 }
