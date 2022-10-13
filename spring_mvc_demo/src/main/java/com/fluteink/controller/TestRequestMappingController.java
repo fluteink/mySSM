@@ -22,7 +22,8 @@ public class TestRequestMappingController {
         return "success";
     }
 //    @RequestMapping("/a?a/test/ant")
-    @RequestMapping("/a*a/test/ant")
+//    @RequestMapping("/a*a/test/ant")
+    @RequestMapping("/**/test/ant")
     public String testAnt(){
         return "success";
     }
