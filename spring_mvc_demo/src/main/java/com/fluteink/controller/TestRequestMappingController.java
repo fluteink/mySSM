@@ -27,4 +27,8 @@ public class TestRequestMappingController {
     public String testAnt(){
         return "success";
     }
+    @RequestMapping("/test/rest/1")
+    public String testRest(){
+        return "success";
+    }
 }
