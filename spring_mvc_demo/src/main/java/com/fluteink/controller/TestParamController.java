@@ -1,5 +1,6 @@
 package com.fluteink.controller;
 
+import com.fluteink.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,11 @@ public class TestParamController {
     public String getParam(@RequestParam(value = "userName",required = true ,defaultValue = "hello")  String username,
                            String password, @RequestHeader("referer") String referer) {
         System.out.println("username:" + username + " password:" + password+"   referer:"+referer);
+        return "success";
+    }
+    @RequestMapping("/param/pojo")
+    public String getParamByPojo(User user){
+        System.out.println(user);
         return "success";
     }
 }

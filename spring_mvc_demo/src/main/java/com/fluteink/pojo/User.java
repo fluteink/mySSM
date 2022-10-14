@@ -5,21 +5,24 @@ package com.fluteink.pojo;
  * @version 1.0
  */
 public class User {
+
     private Integer id;
+
     private String username;
+
     private String password;
+
+    public User() {
+    }
+
+    public User(Integer id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
 
     public Integer getId() {
         return id;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
     }
 
     public void setId(Integer id) {
@@ -42,12 +45,12 @@ public class User {
         this.password = password;
     }
 
-    public User(Integer id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-    }
-
-    public User() {
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
