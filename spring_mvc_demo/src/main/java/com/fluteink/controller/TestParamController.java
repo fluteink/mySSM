@@ -35,6 +35,7 @@ public class TestParamController {
     }
     @RequestMapping("/param/pojo")
     public String getParamByPojo(User user){
+        System.out.println(user);
         return "success";
     }
 }
