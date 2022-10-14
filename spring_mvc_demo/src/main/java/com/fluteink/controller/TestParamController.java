@@ -1,5 +1,6 @@
 package com.fluteink.controller;
 
+import com.fluteink.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -30,6 +31,10 @@ public class TestParamController {
                            @CookieValue("JSESSIONID") String jsessionId) {
         System.out.println("jsessionId" + jsessionId);
         System.out.println("username:" + username + " password:" + password + "   referer:" + referer);
+        return "success";
+    }
+    @RequestMapping("/param/pojo")
+    public String getParamByPojo(User user){
         return "success";
     }
 }
