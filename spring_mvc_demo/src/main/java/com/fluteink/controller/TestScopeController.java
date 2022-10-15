@@ -6,6 +6,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Map;
+
 /**
  * @author 明宇
  * @version 1.0
@@ -21,12 +23,18 @@ public class TestScopeController {
     }
     @RequestMapping("/test/model")
     public String testModel(Model model) {
+        System.out.println(model.getClass().getName());
         model.addAttribute("testRequestScope","hello,model!");
         return "success";
     }
-    @RequestMapping("/test/map")
-    public String testMap(ModelMap modelMap) {
+    @RequestMapping("/test/modelmap")
+    public String testModelMap(ModelMap modelMap) {
         modelMap.addAttribute("testRequestScope","hello,modelMap!");
+        return "success";
+    }
+    @RequestMapping("/test/map")
+    public String testMap(Map<String,Object> map) {
+        map.put("testRequestScope","hello,Map!");
         return "success";
     }
 }
