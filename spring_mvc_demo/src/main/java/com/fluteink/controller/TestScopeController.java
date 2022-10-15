@@ -13,8 +13,8 @@ public class TestScopeController {
     @RequestMapping("/test/mav")
     public ModelAndView testMAV() {
         ModelAndView mav = new ModelAndView();
-        mav.addObject("testRequestScope","hello,ModelAndView");
-
+        mav.addObject("testRequestScope", "hello,ModelAndView");
+        mav.setViewName("success");
         return mav;
     }
 }
