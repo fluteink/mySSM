@@ -27,5 +27,15 @@ public class TestRestController {
         System.out.println("根据id查询用户信息-->/user/"+id+"-->get");
         return "success";
     }
+    @RequestMapping(value = "/user",method = RequestMethod.POST)
+    public String insertUser(){
+        System.out.println("添加用户信息-->/user-->post");
+        return "success";
+    }
+    @RequestMapping(value = "/user",method = RequestMethod.PUT)
+    public String updateUser(){
+        System.out.println("修改用户信息-->/user-->put");
+        return "success";
+    }
 
 }
