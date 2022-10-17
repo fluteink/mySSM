@@ -37,5 +37,10 @@ public class TestRestController {
         System.out.println("修改用户信息-->/user-->put");
         return "success";
     }
+    @RequestMapping(value = "/user/{id}",method = RequestMethod.DELETE)
+    public String deleteUser(@PathVariable("id") Integer id){
+        System.out.println("删除用户信息-->/user/"+id+"-->delete");
+        return "success";
+    }
 
 }
