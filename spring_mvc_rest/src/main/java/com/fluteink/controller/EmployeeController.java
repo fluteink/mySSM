@@ -22,7 +22,7 @@ public class EmployeeController {
     @RequestMapping(value = "/employee", method = RequestMethod.GET)
     public String getAllEmployees(Model model) {
         Collection<Employee> allEmployees = employeeDao.getAll();
-        model.addAttribute("AllEmployees",allEmployees);
+        model.addAttribute("allEmployees",allEmployees);
         return "employee_list";
     }
 }
