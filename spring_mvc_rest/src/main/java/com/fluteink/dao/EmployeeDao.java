@@ -10,6 +10,12 @@ import java.util.Map;
 /**
  * @author 明宇
  * @version 1.0
+ *  * 查询所有的员工信息-->/employee-->get
+ *  * 跳转到添加页面-->/to/add-->get
+ *  * 新增员工信息-->/employee-->post
+ *  * 跳转到修改页面-->/employee/1-->get
+ *  * 修改员工信息-->/employee-->put
+ *  * 删除员工信息-->/employee/1-->delete
  */
 @Repository
 public class EmployeeDao {
