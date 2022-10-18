@@ -25,4 +25,9 @@ public class EmployeeController {
         model.addAttribute("allEmployees",allEmployees);
         return "employee_list";
     }
+    @RequestMapping(value = "/employee",method = RequestMethod.POST)
+    public String addEmployee(Employee employee){
+        employeeDao.save(employee);
+        return "redirect:/employee";
+    }
 }
