@@ -42,4 +42,9 @@ public class EmployeeController {
         employeeDao.save(employee);
         return "redirect:/employee";
     }
+    @RequestMapping(value = "/employee/{id}",method = RequestMethod.DELETE)
+    public String deleteEmployee(@PathVariable("id") Integer id){
+        employeeDao.delete(id);
+        return "redirect:/employee";
+    }
 }
