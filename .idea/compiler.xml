@@ -11,6 +11,7 @@
         <module name="mybatis_resultMap" />
         <module name="spring_mvc_demo" />
         <module name="mybatis_helloworld" />
+        <module name="spring_mvc_ajax" />
         <module name="spring_mvc_helloworld" />
         <module name="spring_mvc_rest" />
         <module name="spring-transaction" />
@@ -40,6 +41,7 @@
       <module name="spring_helloworld" options="" />
       <module name="spring_ioc_annotation" options="" />
       <module name="spring_ioc_xml" options="" />
+      <module name="spring_mvc_ajax" options="" />
       <module name="spring_mvc_demo" options="" />
       <module name="spring_mvc_helloworld" options="" />
       <module name="spring_mvc_rest" options="" />
