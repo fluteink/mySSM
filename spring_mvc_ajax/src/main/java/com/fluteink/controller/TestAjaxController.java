@@ -13,10 +13,15 @@ import java.io.IOException;
  */
 @Controller
 public class TestAjaxController {
-@RequestMapping("/test/ajax")
+    @RequestMapping("/test/ajax")
     public void testAjax(Integer id, HttpServletResponse response, @RequestBody String requestBody) throws IOException {
-    System.out.println("id"+id);
-    System.out.println("requestBody"+requestBody);
-    response.getWriter().write("hello,axios!!");
-}
+        System.out.println("id" + id);
+        System.out.println("requestBody" + requestBody);
+        response.getWriter().write("hello,axios!!");
+    }
+
+    @RequestMapping("test/RequestBody/json")
+    public void testRequestBody(HttpServletResponse response) throws IOException {
+        response.getWriter().write("hello,RequestBody!!");
+    }
 }
