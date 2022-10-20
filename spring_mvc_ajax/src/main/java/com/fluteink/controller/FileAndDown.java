@@ -47,9 +47,17 @@ public class FileAndDown {
         return responseEntity;
     }
     @RequestMapping("test/up")
-    public String testUp(HttpSession session, MultipartFile photo){
+    public String testUp(HttpSession session, MultipartFile photo) throws IOException {
         String filename = photo.getOriginalFilename();
         System.out.println(filename);
+        ServletContext servletContext = session.getServletContext();
+        String photoPath = servletContext.getRealPath("photo");
+        File file = new File(photoPath);
+        if(!file.exists()){
+            file.mkdir();
+        }
+        String finalPath = photoPath+File.separator+filename;
+        photo.transferTo(new File(finalPath));
         return "success";
     }
 }
