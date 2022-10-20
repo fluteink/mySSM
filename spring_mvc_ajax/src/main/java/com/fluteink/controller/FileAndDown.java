@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.UUID;
 
 /**
  * @author 明宇
@@ -49,7 +50,9 @@ public class FileAndDown {
     @RequestMapping("test/up")
     public String testUp(HttpSession session, MultipartFile photo) throws IOException {
         String filename = photo.getOriginalFilename();
-        System.out.println(filename);
+        String hz = filename.substring(filename.lastIndexOf("."));
+        String s = UUID.randomUUID().toString();
+        filename=s+hz;
         ServletContext servletContext = session.getServletContext();
         String photoPath = servletContext.getRealPath("photo");
         File file = new File(photoPath);
