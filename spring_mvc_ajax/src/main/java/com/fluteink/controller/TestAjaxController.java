@@ -35,7 +35,12 @@ public class TestAjaxController {
     }
     @RequestMapping("/test/ResponseBody")
     @ResponseBody
-    public String testRequestBody(){
+    public String testResponseBody(){
         return "success";
+    }
+    @RequestMapping("SpringMVC/test/ResponseBody/json")
+    @ResponseBody
+    public User testResponseBodyJson(){
+        return new User(1001,"admin","123456",20,"男");
     }
 }
