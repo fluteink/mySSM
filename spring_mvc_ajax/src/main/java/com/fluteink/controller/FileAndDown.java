@@ -6,9 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +26,8 @@ public class FileAndDown {
         //获取ServletContext对象
         ServletContext servletContext = session.getServletContext();
         //获取服务器中文件的真实路径
-        String realPath = servletContext.getRealPath("/img/agirl.jpg");
+        String realPath = servletContext.getRealPath("img");
+        realPath=realPath+ File.separator+"agirl.jpg";
         //创建输入流
         InputStream is = new FileInputStream(realPath);
         //创建字节数组
@@ -42,5 +45,11 @@ public class FileAndDown {
         //关闭输入流
         is.close();
         return responseEntity;
+    }
+    @RequestMapping("test/up")
+    public String testUp(HttpSession session, MultipartFile photo){
+        String filename = photo.getOriginalFilename();
+        System.out.println(filename);
+        return "success";
     }
 }
