@@ -24,7 +24,7 @@ public class FileAndDown {
         //获取ServletContext对象
         ServletContext servletContext = session.getServletContext();
         //获取服务器中文件的真实路径
-        String realPath = servletContext.getRealPath("/static/img/1.jpg");
+        String realPath = servletContext.getRealPath("/img/agirl.jpg");
         //创建输入流
         InputStream is = new FileInputStream(realPath);
         //创建字节数组
