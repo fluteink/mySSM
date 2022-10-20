@@ -4,6 +4,7 @@ import com.fluteink.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -31,5 +32,10 @@ public class TestAjaxController {
     public void testRequestBody(@RequestBody Map<String,Object> map, HttpServletResponse response) throws IOException {
         System.out.println(map);
         response.getWriter().write("hello,RequestBody!!!!!!!");
+    }
+    @RequestMapping("/test/ResponseBody")
+    @ResponseBody
+    public String testRequestBody(){
+        return "success";
     }
 }
