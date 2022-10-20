@@ -58,6 +58,7 @@ public class FileAndDown {
         File file = new File(photoPath);
         if(!file.exists()){
             file.mkdir();
+
         }
         String finalPath = photoPath+File.separator+filename;
         photo.transferTo(new File(finalPath));
