@@ -19,6 +19,11 @@ import java.util.Map;
  */
 @Controller
 public class TestAjaxController {
+    @RequestMapping("hello")
+    public String hello(){
+        System.out.println(1/0);
+        return "success";
+    }
     @RequestMapping("/test/ajax")
     public void testAjax(Integer id, HttpServletResponse response, @RequestBody String requestBody) throws IOException {
         System.out.println("id" + id);
