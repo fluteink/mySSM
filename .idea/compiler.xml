@@ -12,7 +12,9 @@
         <module name="spring_mvc_demo" />
         <module name="mybatis_helloworld" />
         <module name="spring_mvc_ajax" />
+        <module name="ssm" />
         <module name="spring_mvc_helloworld" />
+        <module name="spring_mvc_annotation" />
         <module name="spring_mvc_rest" />
         <module name="spring-transaction" />
         <module name="mybatis_parameter" />
@@ -42,9 +44,11 @@
       <module name="spring_ioc_annotation" options="" />
       <module name="spring_ioc_xml" options="" />
       <module name="spring_mvc_ajax" options="" />
+      <module name="spring_mvc_annotation" options="" />
       <module name="spring_mvc_demo" options="" />
       <module name="spring_mvc_helloworld" options="" />
       <module name="spring_mvc_rest" options="" />
+      <module name="ssm" options="" />
     </option>
   </component>
 </project>
