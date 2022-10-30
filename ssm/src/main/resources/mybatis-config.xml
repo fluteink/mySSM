@@ -9,7 +9,4 @@
     objectFactory?,objectWrapperFactory?,reflectorFactory?,
     plugins?,environments?,databaseIdProvider?,mappers?
     -->
-    <mappers>
-        <package name=""/>
-    </mappers>
 </configuration>
