@@ -9,9 +9,6 @@
     objectFactory?,objectWrapperFactory?,reflectorFactory?,
     plugins?,environments?,databaseIdProvider?,mappers?
     -->
-    <typeAliases>
-        <package name=""/>
-    </typeAliases>
     <mappers>
         <package name=""/>
     </mappers>
