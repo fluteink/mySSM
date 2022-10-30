@@ -15,7 +15,6 @@
         <module name="ssm" />
         <module name="spring_mvc_helloworld" />
         <module name="spring_mvc_annotation" />
-        <module name="spring_mvc_rest" />
         <module name="spring-transaction" />
         <module name="mybatis_parameter" />
         <module name="mybatis_mbg" />
@@ -26,7 +25,9 @@
         <module name="spring_ioc_annotation" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="spring_mvc_rest" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
