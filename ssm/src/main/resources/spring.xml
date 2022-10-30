@@ -16,5 +16,6 @@
     <bean class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <property name="dataSource" ref="dataSource"/>
+        <property name="typeAliasesPackage" value="com.fluteink.ssm.pojo"/>
     </bean>
 </beans>
