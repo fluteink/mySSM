@@ -13,5 +13,7 @@
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
     </bean>
-    <bean class="org.mybatis.spring.SqlSessionFactoryBean"></bean>
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="mybatis-config.xml"/>
+    </bean>
 </beans>
