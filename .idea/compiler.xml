@@ -27,6 +27,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="spring_mvc_rest" target="1.8" />
+      <module name="ssmm" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -50,6 +51,7 @@
       <module name="spring_mvc_helloworld" options="" />
       <module name="spring_mvc_rest" options="" />
       <module name="ssm" options="" />
+      <module name="ssmm" options="" />
     </option>
   </component>
 </project>

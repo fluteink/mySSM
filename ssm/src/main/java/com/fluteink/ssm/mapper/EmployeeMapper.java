@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface EmployeeMapper {
 
-    List<Employee> getAllEmployees();
+    List<Employee> getAllEmployee();
 }

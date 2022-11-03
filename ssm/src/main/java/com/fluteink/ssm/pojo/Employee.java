@@ -5,21 +5,26 @@ package com.fluteink.ssm.pojo;
  * @version 1.0
  */
 public class Employee {
+
     private Integer empId;
+
     private String empName;
+
     private Integer age;
+
     private String gender;
+
     private String email;
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "empId=" + empId +
-                ", empName='" + empName + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+    public Employee() {
+    }
+
+    public Employee(Integer empId, String empName, Integer age, String gender, String email) {
+        this.empId = empId;
+        this.empName = empName;
+        this.age = age;
+        this.gender = gender;
+        this.email = email;
     }
 
     public Integer getEmpId() {
@@ -62,14 +67,14 @@ public class Employee {
         this.email = email;
     }
 
-    public Employee(Integer empId, String empName, Integer age, String gender, String email) {
-        this.empId = empId;
-        this.empName = empName;
-        this.age = age;
-        this.gender = gender;
-        this.email = email;
-    }
-
-    public Employee() {
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

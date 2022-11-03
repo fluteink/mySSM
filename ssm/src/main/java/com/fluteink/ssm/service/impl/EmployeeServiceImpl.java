@@ -20,8 +20,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeMapper employeeMapper;
-    @Override
-    public List<Employee> getAllEmployees() {
-       return employeeMapper.getAllEmployees();
+
+    public List<Employee> getAllEmployee() {
+        return employeeMapper.getAllEmployee();
     }
 }

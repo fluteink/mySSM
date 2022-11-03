@@ -9,5 +9,5 @@ import java.util.List;
  * @version 1.0
  */
 public interface EmployeeService {
-    List<Employee> getAllEmployees();
+    List<Employee> getAllEmployee();
 }
